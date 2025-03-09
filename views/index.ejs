@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT SUMMARY Generator</title>
+ <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="container" id="search">
+
+        <form autocomplete="off" action="/getsummary" method="post">
+            <h1>YouTube Summary Generator</h1>
+            <input type="text" name="url" id="url" required placeholder="Enter URL: Video should be less than 15 min">
+            <input type="submit" value="Get Summary">
+        </form>
+
+    </div>
+    
+
+    <div class="container" id="load">
+        <% if (data) { %>
+            <p><%= data %></p>
+        <% } %>
+
+    </div>
+
+   
+    
+</body>
+</html>
